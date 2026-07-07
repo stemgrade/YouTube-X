@@ -101,6 +101,18 @@
 
 %end
 
+// Fix No Reel ads on latest YT 21.26.4 versions issues #31 fix by StemGrade)
+%hook YTReelContentModel
+
+- (YTReelModel *)makeContentModelForEntry:(id)entry {
+    YTReelModel *model = %orig;
+    if ([model respondsToSelector:@selector(videoType)] && model.videoType == 3)
+        return nil;
+    return model;
+}
+
+%end
+
 %hook YTReelInfinitePlaybackDataSource
 
 - (YTReelModel *)makeContentModelForEntry:(id)entry {
