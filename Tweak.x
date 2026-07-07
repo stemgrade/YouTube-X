@@ -10,7 +10,6 @@
 #import <HBLog.h>
 
 %hook YTGlobalConfig
-
 - (BOOL)shouldBlockUpgradeDialog { return YES; }
 
 %end
@@ -30,7 +29,6 @@
 %end
 
 %hook YTIPlayabilityStatus
-
 - (BOOL)isPlayableInBackground { return YES; }
 
 %end
@@ -43,7 +41,6 @@
 %end
 
 %hook YTHotConfig
-
 - (BOOL)clientInfraClientConfigIosEnableFillingEncodedHacksInnertubeContext { return NO; }
 
 %end
