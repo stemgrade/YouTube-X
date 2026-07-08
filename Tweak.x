@@ -188,6 +188,17 @@ NSString *getAdString(NSString *description) {
         @"text_image_button_layout",
         @"text_search_ad",
         @"video_display_full_layout",
+
+// Fix No Reel ads on latest YT 21.26.4 versions issues #31 fix by StemGrade)
+        @"eml.ads.reels.ad_metadata",
+        @"eml.ads.reels",
+        @"eml.ads.reels.ad__card",
+        @"ads.reels.ad_metadata",
+        @"ads.reels.ad__card",
+        @"ads.reels",
+        @"eml.ads.reels",
+
+
         @"video_display_full_buttoned_layout"
     ])
         if ([description containsString:str]) return str;
